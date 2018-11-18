@@ -1,0 +1,871 @@
+/*
+西米网站项目的css样式
+*/
+
+/*
+写网站的第一步：初始化css
+
+注意在写网站时一般不使用下面这种初始化方式，以为这种方式是十分消耗性能的，它会把每个标签都遍历一遍
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+推荐使用此种方式对css进行初始化,可以有效的提高性能
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+*/
+
+
+/*
+ 1、初始化页面(初始化CSS样式)
+*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*
+2、将页面上文字的主体大小和颜色设置在body标签上
+*/
+body {
+    /*将页面上的文字设置统一的文字大小和文字颜色*/
+    font-size: 12px;
+    color: #444444;
+}
+
+
+/*
+页面顶部导航的样式
+*/
+#dv-nav {
+    height: 26px;
+    background-color: #F7F7F7;
+    border: 1px solid #D8D8D8;
+
+}
+
+/*
+页面版心的样式
+*/
+.dv-type-page {
+    width: 970px;
+    margin: 0 auto;
+}
+
+/*左侧导航的样式*/
+#dv-left-nav {
+    /*设置此div的内容垂直居中*/
+    line-height: 26px;
+    float: left;
+
+}
+
+
+/*导航右侧的 建材网首页*/
+#dv-right-nav {
+    /*设置此div的内容垂直居中*/
+    line-height: 26px;
+    float: right;
+}
+
+/*设置页面中所有ul标签的样式*/
+ul {
+    /*清除ul列表左侧的小圆点*/
+    list-style: none;
+}
+
+/*给导航右侧的ul标签中的li标签设置左浮动，使其能够从之前的垂直排列变成水平排列*/
+#dv-right-nav ul li {
+    float: left;
+    /*为了后续增大单个item的点击面积，并且与其它item保持间距,那么使用padding来设值*/
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+/*
+设置当鼠标悬停在右侧导航栏上时的样式
+*/
+#dv-right-nav ul li:hover {
+    background-color: #ADADAD;
+
+}
+
+a {
+    /*去除a标签的下划线*/
+    text-decoration: none;
+    /*
+    因为a标签的颜色是不会被继承的,那么就单独给a标签设置颜色
+    */
+    color: #444444;
+}
+
+a:hover {
+    /*当鼠标悬停在右侧导航栏时文字的颜色设置为红色*/
+    color: #CC0000;
+}
+
+
+img {
+    /*1、首先将当前的标签转换为行内块级标签*/
+    display: inline-block;
+
+    /*
+    2、
+    vertical-align  表示垂直排列
+    middle  表示中间的
+    表示将垂直排列设置为中间的
+    */
+    vertical-align: middle;
+}
+
+/*
+设置页面内容和底部的样式
+*/
+#conent-and-bottom-dv {
+    /*将页面内容和底部页面都显示在水平居中的位置*/
+    width: 970px;
+    margin: 0 auto;
+
+}
+
+/*内容顶部梅兰商贸+搜索栏*/
+#content-top-search {
+    /*宽度设置为填充父容器*/
+    width: 970px;
+    height:126px ;
+
+}
+
+
+
+/*
+内容顶部梅兰商贸+搜索栏
+*/
+#content-top-search-dv-search {
+    width: 970px;
+    height:98px ;
+    background-color: white;
+
+    /*
+        遵循子绝父相原则
+    表示将左侧梅兰商贸图片设置在 内容顶部梅兰商贸+搜索栏 垂直居中的位置
+    */
+    position: relative;
+}
+
+/*
+左侧梅兰商贸图片
+*/
+#content-top-search-search-dv-img {
+    width: 200px;
+    height: 55px;
+    background: url("../imgs/meilanshangmao.gif");
+
+    /*
+       遵循子绝父相原则
+    表示将左侧梅兰商贸图片设置在 内容顶部梅兰商贸+搜索栏 垂直居中的位置
+     */
+    position: absolute;
+    top: 50%;
+    margin-top: -27px;
+
+}
+
+
+/**
+右侧请输入关键字搜索栏
+ */
+#content-top-search-search-dv-search {
+
+    width: 520px;
+    height: 32px;
+    background-color: #F7F7F7;
+    border: 1px solid #C9C9C9;
+
+    /*
+     遵循子绝父相原则
+  表示将左侧梅兰商贸图片设置在 内容顶部梅兰商贸+搜索栏 垂直居中的位置
+   */
+    position: absolute;
+    top: 50%;
+    margin-top: -21px;
+
+    /*将右侧请输入关键字搜索栏 设置在右边*/
+    float: right;
+    right: 0px;
+
+    padding: 5px;
+}
+
+/*
+右侧请输入关键字搜索栏中的输入框
+*/
+#content-top-search-search-dv-search-input {
+    width: 419px;
+    height: 28px;
+    border: 1px solid #A6A6A6;
+    margin-top: 1px;
+
+    /*设置输入框中默认值缩进1个文本空格*/
+    text-indent: 1em;
+
+
+}
+
+/*
+右侧请输入关键字搜索栏中的 搜索按钮
+*/
+#content-top-search-search-dv-search-img {
+    width: 99px;
+    height: 30px;
+    float: right;
+    top: 0px;
+
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+
+
+}
+
+/**
+首页-建筑材料....导航栏
+ */
+#content-top-search-dv-nav {
+    width: 100%;
+    height: 27px;
+    background: url("../imgs/home_nav_bg.fw.png");
+}
+
+/*
+首页-建筑材料....导航栏 中的ul标签中的li标签
+*/
+#content-top-search-dv-nav ul li {
+
+    /*将所有的li标签设置为左浮动，也就是让其列表水平排列*/
+    float: left;
+    /*设置li标签中的文字垂直排列*/
+    line-height: 27px;
+    margin-left: 15px;
+    margin-right: 15px;
+
+
+}
+
+/*
+首页-建筑材料....导航栏 中的ul标签中的li标签中的a标签的样式
+*/
+#content-top-search-dv-nav ul li a {
+    /*设置文字加粗*/
+    font-weight: bold;
+}
+
+
+/*
+单独给首页设置样式
+*/
+#content-top-search-dv-nav-home {
+    color: white;
+}
+
+/*
+给建筑材料、儿童安全座椅、工艺美术品设置相同的样式
+*/
+.content-top-search-dv-nav-a {
+    color: #0266A3;
+}
+
+
+
+/**
+上级市场+选建材就来+建材通大众版
+ */
+#market-opportunity-dv-root {
+    width: 970px;
+    height: 210px;
+    margin-top: 10px;
+
+}
+
+/**
+市场商机
+ */
+#market-opportunity-dv {
+    width: 200px;
+    height: 210px;
+
+    /*
+    给其设置浮动，是div水平排列
+    */
+    float: left;
+}
+
+#choose-materials-dv {
+    width: 520px;
+    height: 210px;
+    background: url("../imgs/slideshow.jpg");
+
+    /*
+      给其设置浮动，是div水平排列
+      */
+    float: left;
+    margin-left: 10px;
+}
+
+#building-materials-through-dv {
+    width: 230px;
+    height: 210px;
+
+    /*给其设置浮动，并且将当前的div显示在右边*/
+    float: right;
+
+}
+
+
+/**
+市场商机标题
+ */
+#market-opportunity-title-dv {
+    /*
+    设置宽度填充父窗体
+    width: 180px; 注意：这个市场商机的标题实际宽度为200像素，但是因为设置padding-left: 20px; ，在CSS中设置padding属性值会导致增加父容器相应的高度或者宽度，200-20=180
+    */
+    width: 180px;
+    height: 30px;
+    background-color: #0266A3;
+    color: white;
+    /*设置文字垂直居中显示在div中*/
+    line-height:30px;
+    /*设置文字加粗显示*/
+    font-weight: bold;
+    padding-left: 20px;
+
+}
+
+
+/**
+  内部列表根视图
+ */
+#market-opportunity-content-list {
+    /*宽度填充父窗体*/
+    width: 200px;
+    height: 180px;
+    background-color: #EBF0F6;
+
+    /*为了解决margin的塌陷现象所设置的*/
+    overflow: hidden;
+
+}
+
+
+/**
+内部列表
+ */
+#market-opportunity-list-ul {
+    margin-top: 13px;
+    padding-left: 38px;
+    /*设置列表的头部图标为背景颜色，并且不平铺,只显示一张图片*/
+    background: url("../imgs/list_icon_1.gif") no-repeat;
+}
+
+
+/**
+每个列表的样式
+ */
+#market-opportunity-list-ul li {
+    height: 27px;
+}
+
+/*
+建材通大众版
+*/
+#building-materials-through-top-dv {
+    width: 228px;
+    height: 92px;
+    background-color: #F7FAFF;
+
+    border: 1px solid #E0E6F0;
+}
+
+/**
+找信息或者发信息根布局
+ */
+#building-materials-through-bottom-dv {
+    width: 230px;
+    height: 95px;
+    background-color: #F7F7F7;
+    margin-top: 21px;
+
+}
+
+/**
+建材通大众版标题
+ */
+#building-materials-through-top-title-dv {
+    width: 100%;
+    height: 28px;
+
+    font-weight: bold;
+    padding-left: 20px;
+    line-height: 28px;
+
+}
+
+/**
+大众版图片+描述文字 根布局
+ */
+#building-materials-through-top-content {
+    width: 100%;
+    height: 66px;
+
+    /*
+    遵循子绝父相原则
+    */
+    position: relative;
+
+}
+
+/**
+大众版图片+描述文字
+ */
+#building-materials-through-top-content-dv {
+
+    width: 208px;
+    height: 40px;
+
+    /*
+   遵循子绝父相原则
+   实现使子元素显示在父容器垂直居中的位置
+   */
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    left: 50%;
+    margin-left: -104px;
+
+}
+
+
+/**
+大众版图片
+ */
+#building-materials-through-top-content-img {
+    width: 40px;
+    height: 40px;
+    background: url("../imgs/public.gif");
+
+    float: left;
+    left: 0px;
+}
+
+
+/**
+大众版旁边的描述文字
+ */
+#building-materials-through-top-content-msg {
+    width: 160px;
+    height: 40px;
+
+    float: left;
+    margin-left: 5px;
+    margin-top: 3px;
+
+}
+
+/**
+找信息
+ */
+#find-information-dv {
+    width: 230px;
+    height: 37px;
+
+    /*设置文本水平居中*/
+    text-align: center;
+    /*设置文本垂直居中*/
+    line-height: 37px;
+
+    color: #C9C9C9;
+    font-size: 16px;
+}
+
+
+/*
+0571-899.....跟布局,主要用于将子元素设置在水平居中位置
+*/
+#phone-number-root-dv {
+    width: 230px;
+    height: 20px;
+
+    position: relative;
+}
+
+/*
+实际电话号码
+*/
+#phone-number-dv {
+    width: 150px;
+    height: 20px;
+
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    background: url("../imgs/phone.gif") no-repeat;
+
+    color: #96C7EA;
+    padding-left: 23px;
+    font-size: 14px;
+
+}
+
+/*
+ 浏览咨询图片 根视图
+*/
+#leave_message-dv {
+    width: 100%;
+    height: 23px;
+
+    position: relative;
+    margin-top: 10px;
+}
+
+#leave_message-dv input {
+    width: 81px;
+    height: 23px;
+
+    position: absolute;
+    left: 50%;
+    margin-left: -40px;
+}
+
+
+/**
+建筑材料大板块
+ */
+#building-materials-root-dv {
+
+    width: 970px;
+    height: 393px;
+    margin-top: 14px;
+
+
+}
+
+
+/*
+建筑材料板块标题
+*/
+.product-type-title{
+
+    width: 949px;
+    height: 34px;
+
+    border-top: 2px solid #C3D7E4;
+    background-color: #ECF1F7;
+
+    /*设置文字加粗显示*/
+    font-weight: bold;
+    /*设置内容文字垂直居中*/
+    line-height: 34px;
+    padding-left: 21px;
+}
+
+
+/*
+建筑材料内容
+*/
+#building-materials-content-dv {
+
+    width: 727px;
+    height: 344px;
+
+    border: 1px solid #D8D8D8;
+    margin-top: 11px;
+
+    float: left;
+}
+
+/*
+建筑咨询板块
+*/
+#building-materials-construction-consulting-dv {
+    width: 228px;
+    height: 344px;
+    border: 1px solid #E0E6F0;
+    margin-top: 11px;
+
+    float: right;
+}
+
+/*
+建材咨询标题
+*/
+#building-materials-construction-consulting-title-dv {
+    width: 213px;
+    height: 28px;
+    border-bottom: 1px solid #E0E6F0;
+    background-color: #FCFCFC;
+    line-height: 28px;
+    padding-left: 15px;
+}
+#building-materials-construction-consulting-content-dv ul {
+    margin-top: 10px;
+    padding-left: 24px;
+    background: url("../imgs/list_point.gif") no-repeat;
+
+}
+
+#building-materials-construction-consulting-content-dv ul li {
+    height: 24px;
+
+}
+
+/*
+建筑材料上部内容
+*/
+#building-materials-content-top-dv {
+    width: 727px;
+    height: 171px;
+    border-top: 1px solid #F2F2F2;
+
+}
+
+/**
+建筑材料内容中的横线根布局
+ */
+#building-materials-content-line-dv {
+
+    width: 717px;
+    height: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+
+#building-materials-content-line-dv div {
+    width: 100%;
+    height: 1px;
+    background-color: #EEEEEE;
+}
+
+/**
+建筑材料底部内容
+ */
+#building-materials-content-bottom-dv {
+    width: 727px;
+    height: 171px;
+}
+
+
+/**
+好太太...大板块和威尔熟木....威尔熟木..大板块的相同样式
+ */
+.building-materials-content-item {
+    width: 350px;
+    height: 171px;
+    float: left;
+}
+
+/**
+好太太...大板块
+ */
+#building-materials-content-top-left-dv {
+
+}
+
+/*
+威尔熟木.....大板块
+*/
+#building-materials-content-top-right-dv {
+}
+
+
+/*
+好太太8818.....大板块
+*/
+#building-materials-content-bottom-left-dv {
+}
+
+
+#building-materials-content-bottom-right-dv {
+}
+
+/*
+单个内容板块中左侧d板块
+*/
+.building-materials-content-item-left {
+    width: 125px;
+    height: 171px;
+    float: left;
+}
+
+/*
+单个内容板块中右侧板块
+*/
+.building-materials-content-item-right {
+    width: 225px;
+    height: 171px;
+    float: right;
+}
+
+/*
+顶部图片板块
+*/
+.building-materials-content-item-left-top-dv {
+    width: 126px;
+    height: 124px;
+
+    position: relative;
+}
+
+/*
+底部立即购买板块
+*/
+.building-materials-content-item-left-bottom-dv {
+    width: 126px;
+    height: 47px;
+
+    position: relative;
+}
+
+
+/*
+顶部图片板块中的图片
+*/
+.building-materials-content-item-left-top-img-dv {
+    width: 97px;
+    height: 100px;
+    border: 1px solid #CACACA;
+
+    /*
+    遵循子绝父相的原则
+    将当前的div显示在父容器的右侧垂直居中的位置*/
+    position: absolute;
+    top: 50%;
+    margin-top: -49px;
+    right: 0px;
+
+
+
+}
+
+/*
+晾衣架
+*/
+#building-materials-content-item-left-top-img-clothes-hanger {
+    /*设置此div的背景图片，并且不平铺只显示一张，并且将当前的背景图片显示此div水平和垂直居中的位置*/
+    background: url("../imgs/haotaitai.gif") no-repeat center;
+}
+
+/*
+地板图片
+*/
+#building-materials-content-item-left-top-img-floor {
+    background: url("../imgs/floor.gif") no-repeat center;
+}
+
+/*
+三件套图片
+*/
+#building-materials-content-item-left-top-img-three-piece {
+    background: url("../imgs/three-piece.gif") no-repeat center;
+}
+
+/*
+衣架 8188
+*/
+#building-materials-content-item-left-top-img-clothes-hanger8188 {
+    background: url("../imgs/clothes-hanger8188.gif") no-repeat center;
+}
+
+.building-materials-content-item-left-bottom-dv input {
+    width: 98px;
+    height: 26px;
+
+    position: absolute;
+    top: 50%;
+    margin-top: -13px;
+    right: 0px;
+
+}
+
+/*
+商品的标题
+*/
+.building-materials-content-item-right-title {
+    margin-top: 21px;
+    margin-left: 10px;
+    color: black;
+    font-size: 14px;
+
+}
+
+/*
+商品的属性
+*/
+.building-materials-content-item-right-property {
+    margin-top: 14px;
+    margin-left: 14px;
+    color: #863E01;
+}
+
+/*价格*/
+.building-materials-content-item-right-price {
+    margin-top: 14px;
+    margin-left: 11px;
+    color: #333333;
+}
+
+.building-materials-content-item-right-price-now {
+    font-size: 14px;
+    color: #C50934;
+    font-weight: bold;
+}
+
+.building-materials-content-item-right-price-before {
+    color: #555555;
+    margin-left: 25px;
+}
+
+.building-materials-content-item-right-shipments {
+    margin-top: 22px;
+    margin-left: 10px;
+}
+
+.building-materials-content-item-right-price-item {
+    color: #CF0A5B;
+}
+
+/*儿童安全座椅大板块*/
+#child-safety-seat-root-dv {
+    width: 970px;
+    height: 374px;
+    margin-top: 15px;
+}
+
+/*
+儿童安全座椅内容
+*/
+#child-safety-seat-content-dv {
+    width: 970px;
+    height: 328px;
+
+    margin-top: 10px;
+    background-color: #0266A3;
+
+}
+
+/*
+儿童安全座椅左侧内容
+*/
+#child-safety-seat-content-left-dv {
+
+}
